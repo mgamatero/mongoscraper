@@ -1,5 +1,36 @@
-.body {
+body {
     background-image: url("../images/mainquora.jpg");
+    background-repeat: repeat-y;
+    background-size: 100%;
+    
  }
+
+ #welcomeTitle{
+     color: rgb(243, 240, 236);
+     font-style: oblique;
+     text-align: center;
+ }
+
+ #btn-scrape{
+     color:whitesmoke;
+     background-color: rgba(56, 52, 52, 0.836);
+     align-self: center;
+ }
+ .card{
+     background-color: rgba(218, 155, 104, 0.596);
+     border: solid 2px rgb(209, 111, 20);
+     margin:2%;
+     padding:1%;
+     
+ }
+
+ .btn-small{
+    color:whitesmoke;
+    background-color: rgba(1, 21, 24, 0.205);
+    border:solid 2px darkorange;
+    text-align: center;
+    text-justify: auto;
+    
+}
 
 

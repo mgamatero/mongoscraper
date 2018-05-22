@@ -19,6 +19,7 @@ module.exports = function (app) {
     var resultArr = []
     // ---------
     app.get('/', function (req, res) {
+        resultArr = []
         request('https://www.quora.com/search?q=javascript',function(e,r,html){
             if (e) throw e
             var $ = cheerio.load(html)
@@ -35,11 +36,13 @@ module.exports = function (app) {
                 )
             })
             console.log(resultArr)
+            res.json(resultArr)
                
         })
-
        
     });
+
+    
 }
 
 //   // ------------------

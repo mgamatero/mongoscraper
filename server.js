@@ -16,6 +16,7 @@ app.use(bodyparser.json())
 
 // Static file support with public folder
 app.use(express.static(path.join(__dirname, 'public')))
+// app.use(express.static("public"))
 
 //Routes
 require('./routes/routes.js')(app)
