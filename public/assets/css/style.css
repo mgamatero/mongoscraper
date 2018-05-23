@@ -15,12 +15,19 @@ body {
      background-color: rgba(56, 52, 52, 0.836);
      align-self: center;
  }
+
  .card{
      background-color: rgba(218, 155, 104, 0.596);
      border: solid 2px rgb(209, 111, 20);
      margin:2%;
      padding:1%;
-     
+ }
+
+ .scrapedResults{
+     background-color: rgba(146, 221, 221, 0.589);
+     border: solid 2px rgb(71, 127, 173);
+     margin:2%;
+     padding:1%;
  }
 
  .btn-small{
@@ -29,7 +36,14 @@ body {
     border:solid 2px darkorange;
     text-align: center;
     text-justify: auto;
-    
+}
+
+ .btn-small-scraped-view ,.btn-small-scraped-delete,.btn-small-scraped-addnote{
+    color:whitesmoke;
+    background-color: rgb(71, 127, 173);
+    border:solid 2px rgb(71, 127, 173);
+    text-align: center;
+    text-justify: auto;
 }
 
 

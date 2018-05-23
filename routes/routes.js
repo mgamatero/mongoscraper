@@ -42,6 +42,32 @@ module.exports = function (app) {
 
     });
 
+    app.get('/savedScrapes', function (req, res) {
+       db.scrape.find({}).then(function(r){
+           res.json(r)
+           console.log(r)
+        }).catch(function(e){
+            res.send(e)
+            console.log(e)
+       })
+            // $('a.question_link').each(function (i, element) {
+            //     var title = $(element).text()
+            //     var link = $(element).attr("href")
+            //     resultArr.push(
+            //         {
+            //             title: title,
+            //             link: "https://www.quora.com/" + link,
+
+            //         }
+            //     )
+            // })
+            // console.log(resultArr)
+            // res.json(resultArr)
+
+        // })
+
+    });
+
     app.post('/article/new/', function (req, res) {
         db.scrape.create({
             title: req.body.title,

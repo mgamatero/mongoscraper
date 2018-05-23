@@ -13,7 +13,6 @@ function showScrapesIndex() {
         }
         localStorage.setItem('theScrapesInArray',JSON.stringify(r))
     })
-    
 }
 
 
