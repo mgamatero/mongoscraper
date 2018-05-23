@@ -2,8 +2,7 @@ body {
     background-image: url("../images/mainquora.jpg");
     background-repeat: repeat-y;
     background-size: 100%;
-    
- }
+     }
 
  #welcomeTitle{
      color: rgb(243, 240, 236);
@@ -11,7 +10,7 @@ body {
      text-align: center;
  }
 
- #btn-scrape{
+ #btn-scrape, #btn-backToHome{
      color:whitesmoke;
      background-color: rgba(56, 52, 52, 0.836);
      align-self: center;

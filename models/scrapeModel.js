@@ -11,7 +11,11 @@ var scrape = new Schema({
         {
             type: String,
             required: true
+        },
+    notes:
+        {
+            type: String
         }
 })
 
-module.exports = mongoose.model('scrape',scrape)
+module.exports = mongoose.model('scrape', scrape)

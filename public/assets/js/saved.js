@@ -1,6 +1,6 @@
-$.post('/article/new/'/*,OBJECTHERE*/).then(function (r){
-    console.log("article added")
-})
+// $.post('/article/new/'/*,OBJECTHERE*/).then(function (r){
+//     console.log("article added")
+// })
 
 function showScrapesIndex() {
     $.get('/').then(function (r) {

@@ -15,33 +15,43 @@ var cheerio = require('cheerio')
 // Routes
 // =============================================================
 module.exports = function (app) {
-    
+
     var resultArr = []
     // ---------
     app.get('/', function (req, res) {
         resultArr = []
-        request('https://www.quora.com/search?q=javascript',function(e,r,html){
+        request('https://www.quora.com/search?q=javascript', function (e, r, html) {
             if (e) throw e
             var $ = cheerio.load(html)
-       
-            $('a.question_link').each(function(i,element){
+
+            $('a.question_link').each(function (i, element) {
                 var title = $(element).text()
                 var link = $(element).attr("href")
                 resultArr.push(
                     {
-                        title:title,
-                        link:"https://www.quora.com/"+link,
-        
+                        title: title,
+                        link: "https://www.quora.com/" + link,
+
                     }
                 )
             })
             console.log(resultArr)
             res.json(resultArr)
-               
+
         })
-       
+
     });
 
+    app.post('/article/new/', function (req, res) {
+        db.scrape.create({
+            title: req.body.title,
+            link: req.body.link
+        }).then(function (r) {
+            res.send(r)
+        }).catch(function (e) {
+            res.send(e)
+        })
+    })
     
 }
 
