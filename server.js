@@ -6,7 +6,12 @@ var cheerio = require('cheerio')
 var request = require('request')
 var mongoose = require('mongoose')
 var path = require('path')
-mongoose.connect('mongodb://localhost/scrapeDB')
+
+// mongoose.connect('mongodb://localhost/scrapeDB')
+var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/scrapeDB"
+mongoose.Promise = Promise;
+mongoose.connect(MONGODB_URI)
+
 
 var app = express()
 var db = require('./models')
