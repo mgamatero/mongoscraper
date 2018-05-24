@@ -1,7 +1,3 @@
-$.post('/article/new/'/*,OBJECTHERE*/).then(function (r){
-    console.log("article added")
-})
-
 function showScrapesIndex() {
     $.get('/').then(function (r) {
         for (var i = 0; i < r.length; i++) {

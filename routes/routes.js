@@ -50,24 +50,9 @@ module.exports = function (app) {
             res.send(e)
             console.log(e)
        })
-            // $('a.question_link').each(function (i, element) {
-            //     var title = $(element).text()
-            //     var link = $(element).attr("href")
-            //     resultArr.push(
-            //         {
-            //             title: title,
-            //             link: "https://www.quora.com/" + link,
-
-            //         }
-            //     )
-            // })
-            // console.log(resultArr)
-            // res.json(resultArr)
-
-        // })
-
     });
 
+    
     app.post('/article/new/', function (req, res) {
         db.scrape.create({
             title: req.body.title,
@@ -78,6 +63,28 @@ module.exports = function (app) {
             res.send(e)
         })
     })
+
+    
+    
+    //----Why is this post?  it doesn't work with app.delete
+    app.post('/savedScrapes/:id', function (req, res) {
+        db.scrape.remove({
+            _id:req.params.id
+        }).then(function(r){
+            res.json(r)
+            console.log(r)
+         }).catch(function(e){
+             res.send(e)
+             console.log(e)
+        })
+
+
+        // --same thing, keeping for reference  ----
+        // db.scrape.findByIdAndRemove({_id:req.params.id}).then(function(r){
+        //     res.send(r)
+        // })
+        
+     });
     
 }
 
