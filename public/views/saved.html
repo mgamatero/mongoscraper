@@ -6,7 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Quora Scraper - Saved.html</title>
-  <!-- CSS  -->
+  
+  <!-- CSS/MATERIALIZE  -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
   <link href="../assets/css/style.css" type="text/css" rel="stylesheet" />
@@ -14,16 +15,17 @@
 
 <body>
   <div class="container">
-  <h1 id="welcomeTitle">Your saved Quora articles</h1>
-  <a class="waves-effect waves-light btn" id="btn-backToHome" href="/index">Home Page</a>
-  
-  <div class="row">
-    <h6 id="savedScrapeResults"></h6>
+    <h1 id="welcomeTitle">Your saved Quora articles</h1>
+    <a class="waves-effect waves-light btn" id="btn-backToHome" href="/">Home Page</a>
+
+    <div class="row">
+      <!-- To hold dynamic saved article results -->
+      <h6 id="savedScrapeResults"></h6>
+    </div>
   </div>
-  </div>
+
   <!--  Scripts-->
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-
   <script src="../assets/js/saved.js"></script>
 </body>
 

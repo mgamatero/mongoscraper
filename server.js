@@ -7,7 +7,6 @@ var request = require('request')
 var mongoose = require('mongoose')
 var path = require('path')
 
-// mongoose.connect('mongodb://localhost/scrapeDB')
 var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/scrapeDB"
 mongoose.Promise = Promise;
 mongoose.connect(MONGODB_URI)
@@ -21,7 +20,6 @@ app.use(bodyparser.json())
 
 // Static file support with public folder
 app.use(express.static(path.join(__dirname, 'public')))
-// app.use(express.static("public"))
 
 //Routes
 require('./routes/routes.js')(app)
